@@ -9,4 +9,4 @@ Only works for Linux distro's that support ssmtp, mail() and possses the fswebca
 
 ## What It Needs
 Prerequisites: ssmtp with accurate /etc/ssmtp/ssmtp.conf file, fswebcam, email service that supports being used (some deny it for security reasons).
-sudo apt-get install [mail/ssmptp/fswebcam]
+sudo apt-get install [mail/ssmptp/fswebcam] and download the package names that it corrects you with.
