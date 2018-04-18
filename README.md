@@ -11,7 +11,12 @@ Prerequisites: ssmtp with accurate /etc/ssmtp/ssmtp.conf file, fswebcam, email s
 sudo apt-get install [mail/ssmptp/fswebcam] and download the package names that it corrects you with.
 
 ## How To Setup /etc/ssmtp/ssmtp.conf
-Comment out all uncommented lines--put # in front of everything. Template of what is needed is below.
+```
+gksu gedit /etc/ssmtp/ssmtp.conf
+```
+Once it's open, comment out everything there already. You can comment out lines with the # symbol. 
+
+Template of what is needed is below. If open in gedit, you can copy-paste to the bottom of the original.
 ```
 
   root=[youremail@provider.com]
@@ -36,4 +41,4 @@ Comment out all uncommented lines--put # in front of everything. Template of wha
 ```
 
 ## Error: Something about your provider not allowing access because it's not secure
-They're completely right, got to settings on their website and dig through them to figure out how to allow less-secure apps to run with the email. 
+They're completely right, it's not very secure to write your email and password to a file. Now, go to settings on their website and dig through them to figure out how to allow less-secure apps to run. 
