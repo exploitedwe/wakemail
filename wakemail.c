@@ -16,17 +16,12 @@ int main(int argc, char* argv[]){
 
   */
 
-  //Pre requisites: mail is setup--ssmtp.config is fillied in, and fswebcam for screenshotting
-
   sleep(8);
   system("fswebcam -r 1280x720 --jpeg 85 -D 1 --deinterlace -S 20"
-	   " --quiet ~/Documents/Coding_Hub/Email-On-Wakeup/image.jpg");
+	   " --quiet ~/file/directory/location/of/where/you/want/the/image.jpg");
   sleep(3);
   system("echo ""Someone has logged onto your laptop--user@machine"" | mail -A image.jpg -s "
 	   "LOGIN_DETECTED!"" username@email.com");
-
-
-
 
   return 0;
 }
