@@ -12,6 +12,7 @@ sudo apt-get install [mail/ssmptp/fswebcam] and download the package names that 
 
 ## How To Setup /etc/ssmtp/ssmtp.conf
 Comment out all uncommented lines--put # in front of everything. Template of what is needed is below.
+```
 
   root=[youremail@provider.com]
   
@@ -32,6 +33,7 @@ Comment out all uncommented lines--put # in front of everything. Template of wha
   hostname=[hostname]       # Run hostname command to figure out your hostname
   
   FromLineOverride=YES      # Allows user to specifiy From: address 
+```
 
 ## Error: Something about your provider not allowing access because it's not secure
 They're completely right, got to settings on their website and dig through them to figure out how to allow less-secure apps to run with the email. 
