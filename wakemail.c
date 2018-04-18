@@ -16,12 +16,13 @@ int main(int argc, char* argv[]){
 
   */
 
-  sleep(8);
+  sleep(8); // If it's a startup app, you need a few seconds for the desktop apps to load before running
   system("fswebcam -r 1280x720 --jpeg 85 -D 1 --deinterlace -S 20"
 	   " --quiet ~/file/directory/location/of/where/you/want/the/image.jpg");
-  sleep(3);
+  sleep(3); // Give the screenshotter some time to screenshot before attempting to email
   system("echo ""Someone has logged onto your laptop--user@machine"" | mail -A image.jpg -s "
 	   "LOGIN_DETECTED!"" username@email.com");
 
+  //Could also add a system("rm image.jpg"); if you wanted, I didn't mind having the picture laying around
   return 0;
 }
