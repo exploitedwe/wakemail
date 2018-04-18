@@ -6,7 +6,6 @@ Listen, not here to impress anyone with my README skills, I'll provide the gist.
 This program just takes a screenshot of the person using the computer and emails it to the email indicated. The comment block at the top of the .c is to remind cloners that our cell phone numbers are open to receving emails as sms--you can text yourself on run a picture of the user.
 Only works for Linux distro's that support ssmtp, mail() and possses the fswebcam program. 
 
-
 ## What It Needs
 Prerequisites: ssmtp with accurate /etc/ssmtp/ssmtp.conf file, fswebcam, email service that supports being used (some deny it for security reasons).
 sudo apt-get install [mail/ssmptp/fswebcam] and download the package names that it corrects you with.
@@ -15,16 +14,23 @@ sudo apt-get install [mail/ssmptp/fswebcam] and download the package names that 
 Comment out all uncommented lines--put # in front of everything. Template of what is needed is below.
 
   root=[youremail@provider.com]
+  
   mail.domain.com
+  
   mailhub=[smtp.gmail.com:587] # This is the gmail example, other providers may be different
   
   AuthUser=[youremail@provider.com]
+  
   AuthPass=[password] # There is a way to encrypt this, IDK how though.
+  
   UseTLS=YES
+  
   UseSTARTTLS=YES
   
   rewriteDomain=[gmail.com] # Again, I used gmail, not sure if this follows for others, so I didn't make it look like a template.
+  
   hostname=[hostname]       # Run hostname command to figure out your hostname
+  
   FromLineOverride=YES      # Allows user to specifiy From: address 
 
 ## Error: Something about your provider not allowing access because it's not secure
