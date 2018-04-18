@@ -14,6 +14,11 @@ sudo apt-get install [mail/ssmptp/fswebcam] and download the package names that 
 ```
 gksu gedit /etc/ssmtp/ssmtp.conf
 ```
+or, if you don't have gksu:
+```
+sudo gedit /etc/ssmtp/ssmtp.conf
+```
+
 Once it's open, comment out everything there already. You can comment out lines with the # symbol. 
 
 Template of what is needed is below. If open in gedit, you can copy-paste to the bottom of the original.
